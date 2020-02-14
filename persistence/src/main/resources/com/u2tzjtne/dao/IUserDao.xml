@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.u2tzjtne.SpringDemo.domain.IUserDao">
+    <!--查询所有用户-->
+    <select id="findAll" resultType="com.u2tzjtne.SpringDemo.domain.User">select * from user</select>
+    <!--保存用户-->
+    <insert id="addUser" parameterType="com.u2tzjtne.SpringDemo.domain.User">
+        insert into user(username,address,sex,birthday)values (#{username},#{address},#{sex},#{birthday})
+    </insert>
+</mapper>
